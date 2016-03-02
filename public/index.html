@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="bitcoin">
+<html lang="en" ng-app="bitcoinApp">
 <head>
     <meta charset="UTF-8">
     <title>bitcoin</title>
@@ -7,22 +7,15 @@
 </head>
 <body>
 <div ng-controller="mainCtrl">
-    <h1>{{data.body}}</h1>
+
+    <select ng-options="currency as currency.label for currency in currencies track by currency.id" ng-model="selected"></select>
+    <!--<select name="currency" id="currency" ng-model="currency">
+        <option ng-value="currency" ng-repeat="currency in currencies">{{currency}}</option>
+    </select>-->
+    <button ng-click="click(currency)">Find</button>
+    <h1>{{data.amount}} {{data.currency}}</h1>
 </div>
 <script src="bower_components/angular/angular.js"></script>
-<script>
-
-    var app = angular.module("bitcoin", []);
-
-    app.controller("mainCtrl", function($scope, $http){
-        $http.get("/bitcoin?currency=usd").then(function(config){
-            console.log("data: ", config);
-            $scope.data = config.data;
-        }, function(config){
-            console.log("configError: ", config);
-        })
-    })
-
-</script>
+<script src="app/app.js"></script>
 </body>
 </html>

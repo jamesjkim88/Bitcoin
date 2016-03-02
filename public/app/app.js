@@ -8,7 +8,6 @@ app.controller("mainCtrl", function($scope, $http){
     ];
 
     $scope.click = function(currency){
-        console.log($scope.selected);
         $http.get("/bitcoin?currency=" + $scope.selected.code).then(function(config){
             $scope.data = JSON.parse(config.data.body);
         }, function(config){

@@ -2,7 +2,7 @@
 <html lang="en" ng-app="bitcoinApp">
 <head>
     <meta charset="UTF-8">
-    <title>bitcoin</title>
+    <title>Bitcoin</title>
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="stylesheets/bitcoin.css">
@@ -40,12 +40,13 @@
     </div>
 
     <div ng-controller="mainCtrl">
+        <input type="text" ng-model="amount">
         <select ng-options="currency as currency.label for currency in currencies track by currency.id" ng-model="selected"></select>
         <!--<select name="currency" id="currency" ng-model="currency">
             <option ng-value="currency" ng-repeat="currency in currencies">{{currency}}</option>
         </select>-->
         <button ng-click="click(currency)">Find</button>
-        <h1>{{data.amount}} {{data.currency}}</h1>
+        <h1>{{total}} {{data.currency}}</h1>
     </div>
 <script src="bower_components/angular/angular.js"></script>
 <script src="app/app.js"></script>

@@ -105,6 +105,9 @@ form{
     font-size: 1.25em;
     border-color: #c6c6c6;
     background-color: white;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -moz-appearance:none;
 }
 
 .calcBtn{

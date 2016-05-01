@@ -41,9 +41,9 @@ AMOUNT
 
 #amount, .textBox{
     padding: 12px;
-    width: 7%;
     font-size: 2em;
     outline: none;
+    width: 15%;
     border-radius: 5px;
     background-color: white;
     border-color: #c6c6c6;

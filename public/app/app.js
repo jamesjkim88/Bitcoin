@@ -19,7 +19,9 @@ app.controller("mainCtrl", function($scope, $http){
         $http.get("/bitcoin?currency=" + $scope.selected.code).then(function(config){
             $scope.data = JSON.parse(config.data.body);
             $scope.total = $scope.data.amount * $scope.amount;
-            $(".amount").addClass("show");
+            // $(".amount").addClass("show");
+            var text = '<p class="show amount animated zoomIn">' + $scope.total.toFixed(2) + " " + $scope.data.currency + '</p>';
+            $("#totalBox").append(text)
         }, function(config){
             console.log("configError: ", config);
         });

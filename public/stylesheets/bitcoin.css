@@ -22,15 +22,16 @@ NAVBAR
     background-color: #f5f5f5;
     border-color: #d2d2d2;
     box-shadow: 0 2px 15px 2px #c6c6c6;
-}
-
-.navbar-brand{
-    height: 72px;
+    height: 72px
 }
 
 .navbar-nav{
     font-size: 1.5em;
     margin: 12px;
+}
+
+.navbar-header h3{
+    color: #545454;
 }
 
 
@@ -120,7 +121,7 @@ form{
 }
 
 .shoots{
-    margin-top: 15%;
+    margin-top: 25%;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {  /*safari and chrome*/

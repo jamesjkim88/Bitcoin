@@ -19,7 +19,7 @@ app.controller("mainCtrl", function($scope, $http){
         $http.get("/bitcoin?currency=" + $scope.selected.code).then(function(config){
             $scope.data = JSON.parse(config.data.body);
             $scope.total = $scope.data.amount * $scope.amount;
-            $scope.total.toFixed(2);
+            $(".amount").addClass("show");
         }, function(config){
             console.log("configError: ", config);
         });
